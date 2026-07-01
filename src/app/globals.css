@@ -16,15 +16,15 @@
   --color-orange: #FF6F20;
   --color-sienna: #A0522D;
   --color-icon-light: #F5F8FF;
-
-  --font-figtree: "Figtree", sans-serif;
-  --font-libre: "Libre Baskerville", serif;
-  --font-inter: "Inter", sans-serif;
 }
 
 body {
-  background: var(--color-white);
-  color: var(--color-dark);
+  background-color: #FFFFFF;
+  background-image: url("/images/image-16.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #231F20;
   font-family: var(--font-libre);
   font-size: 15px;
   font-weight: 500;
@@ -61,7 +61,7 @@ h4 {
 }
 
 a {
-  color: var(--color-sienna);
+  color: #A0522D;
   font-weight: 800;
   letter-spacing: -0.2px;
 }
@@ -71,30 +71,30 @@ img {
 }
 
 .btn-primary {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: #975F90;
+  color: #FFFFFF;
   font-family: var(--font-figtree);
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
   border-radius: 60px;
   padding: 12px 30px;
-  border: 1px solid var(--color-primary);
+  border: 1px solid #975F90;
   display: inline-block;
   transition: all 0.3s;
 }
 
 .btn-primary:hover {
-  background-color: var(--color-accent);
-  color: var(--color-cream);
-  border-color: var(--color-secondary);
+  background-color: #C498B9;
+  color: #EAE4E1;
+  border-color: #5B3952;
 }
 
 @media (max-width: 1024px) {
   h1 { font-size: 40px; line-height: 45px; }
   h2 { font-size: 36px; line-height: 40px; }
   h3 { font-size: 26px; line-height: 30px; }
-  body { font-size: 16px; }
+  body { font-size: 18px; }
   .btn-primary { font-size: 24px; border-radius: 8px; }
 }
 
