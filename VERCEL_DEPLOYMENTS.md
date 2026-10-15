@@ -93,3 +93,19 @@ See the existing [repository README](https://github.com/birthcreative/birthcreat
 
 For every future release, append the UTC timestamp, intended project ID/environment, exact source SHA (or archived uploaded-tree identifier), deployment ID, concise change summary, tests actually run, live-domain checks, migrations/configuration changes by name only, remaining limitations, and the previous known-good artifact. Distinguish attempted, preview and live releases. Keep missing evidence explicit. Authenticate through access@thejclabs.com in the existing thejclabs team and verify the project by ID before any release.
 
+
+## Production repair — October 15, 2026 (UTC)
+
+The contact and onboarding forms now deliver submissions to the owner inbox. Both user-approved verification submissions were accepted by the application and marked delivered by the mail provider: contact at 06:27:34 UTC, onboarding at 06:32:15 UTC. No customer information was used.
+
+- Project: `prj_MRUxLRZhSAliRCL3liTdkmg3zRSm`, existing `thejclabs` Pro team; deployment login verified as `access@thejclabs.com`.
+- Production deployment: `dpl_EJnNKgL8oDahntmra9LRRnZNMTuc`, staged with production settings before promotion. Source upload: local commit `f93c7e7b29db496886ae18ec8c6c3bc426fc4950`, Git tree `406823b12500a2d135f439f1080b335cf07fd86e`, based on `403f53d974f785f303b69d5f8e2e2461b888427f`. Repository publication of the source remains pending; this is a CLI-uploaded artifact.
+- Changes: shared form handler and server delivery endpoint; field validation, honeypot, bounded requests, instance rate limiting, provider idempotency and timeouts. Errors preserve entries; success appears only after provider acceptance.
+- Checks actually performed: four functional tests, TypeScript and production build; foreign-origin rejection; missing-configuration failure; browser error feedback retaining entries; both staged forms submitted with explicit owner approval; provider delivered status for both; live contact form readback after promotion.
+- Configuration added by name only: `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL`. No database migration. The sending credential is restricted to the existing verified sending domain.
+- Existing live address remains `https://birthcreative-website.vercel.app`. No domain attachment or redirect was edited.
+- Previous known-good artifact for rollback: `dpl_9KzHxH16k4yVLZ8xWqAeN5uRqfKa`. That artifact rendered the forms but lacked delivery handlers.
+
+The earlier documentation preview is distinct from this tested production repair. Rate limiting is per server instance; mail-provider acceptance and delivery do not guarantee future inbox placement.
+
+
