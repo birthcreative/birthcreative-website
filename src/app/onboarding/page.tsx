@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SubmissionForm from "@/components/SubmissionForm";
 
 export const metadata: Metadata = {
   title: "Onboarding | Birth Creative",
@@ -23,7 +24,7 @@ export default function Onboarding() {
             We&apos;re glad to have you with us. Please complete the following onboarding form! It should take you less than 15 minutes.
           </p>
 
-          <form className="space-y-6 bg-white p-8 rounded-lg border border-[#D0D5DD]">
+          <SubmissionForm kind="onboarding" submitLabel="Submit Onboarding Form">
             <div>
               <label htmlFor="fullname" className="block font-[--font-figtree] text-[16px] font-semibold text-dark mb-2">
                 Full Name *
@@ -101,10 +102,7 @@ export default function Onboarding() {
                 className="w-full border border-[#D0D5DD] rounded-lg px-4 py-3 font-[--font-libre] text-[15px] text-dark focus:outline-none focus:border-primary"
               />
             </div>
-            <button type="submit" className="btn-primary w-full sm:w-auto">
-              Submit Onboarding Form
-            </button>
-          </form>
+          </SubmissionForm>
         </div>
       </section>
     </>
