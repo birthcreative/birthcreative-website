@@ -1,4 +1,4 @@
-import Link from "next/link";
+import SubmissionForm from "@/components/SubmissionForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ export default function ContactUs() {
             Let&apos;s get your business started, we are thrilled to hear from you. Whether you have a question, want to discuss a project, or are interested in collaborating, we are here to help.
           </p>
 
-          <form className="space-y-6 bg-white p-8 rounded-lg border border-[#D0D5DD]">
+          <SubmissionForm kind="contact" submitLabel="Send Message">
             <div>
               <label htmlFor="name" className="block font-[--font-figtree] text-[16px] font-semibold text-dark mb-2">
                 Name *
@@ -77,10 +77,7 @@ export default function ContactUs() {
                 className="w-full border border-[#D0D5DD] rounded-lg px-4 py-3 font-[--font-libre] text-[15px] text-dark focus:outline-none focus:border-primary"
               />
             </div>
-            <button type="submit" className="btn-primary w-full sm:w-auto">
-              Send Message
-            </button>
-          </form>
+          </SubmissionForm>
         </div>
       </section>
     </>
